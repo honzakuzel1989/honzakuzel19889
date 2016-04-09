@@ -1,3 +1,5 @@
+/* http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page */
+
 html, body {
    margin:0;
    padding:0;
@@ -14,7 +16,6 @@ html, body {
 }
 #body {
    text-align:center;  
-   padding:10px;
    /* Height of the body */
    /* padding-bottom:60px; */
 }
@@ -22,8 +23,7 @@ html, body {
 #body {
   position: absolute;
   width: 100%;
-  z-index: 15;
-  top: 33%;
+  top: 25%;
   /* background: red; */
 }
 
@@ -40,4 +40,6 @@ img {
 	width: 64px;
 	height: 64px;
 }
-
+.text {
+    font-family: "Courier New";
+}
