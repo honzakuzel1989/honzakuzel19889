@@ -1,0 +1,30 @@
+img {
+	width: 64px;
+	height: 64px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h2 {
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+    bottom: 0px;
+    border: red;
+    border:1px solid black;
+}
+
