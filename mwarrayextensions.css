@@ -1,0 +1,36 @@
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   text-align:center;
+   /* background:#ff0; */
+   padding:10px;
+}
+#body {
+   text-align:justify;
+   position: relative;
+   width: 90%;
+   margin: 0% 5% 0% 5%
+   /* background: red; */
+}
+#footer {
+   text-align:center;
+   position:relative;
+   bottom:0;
+   width:100%;
+   /* Height of the footer */
+   height:30px;   
+   /* background:#6cf; */
+}
+#title{
+    text-align:center;   
+}
+.text {
+    font-family: "Courier New";
+}
