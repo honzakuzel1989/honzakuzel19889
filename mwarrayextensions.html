@@ -36,29 +36,29 @@
 
             <p class="text">The set contains only a few self-explaining methods: <a href=#ToSingleItem>ToSingleItem</a>, <a href=#ToArray>ToArray</a>, <a href=#ToEnumerableOfArrays>ToEnumerableOfArrays</a>, <a href=#GetField>GetField</a>, <a href=#GetFieldAsSingleItem>GetFieldAsSingleItem</a>, <a href=#GetFieldAsArray>GetFieldAsArray</a>, <a href=#CreateArray>CreateArray</a>, <a href=#CreateItem>CreateItem</a>. As you can see below, the methods significantly simplify work with MWArray based classes and improve code writability and readability.</p>
             
-            <p class="text">If you want to try these extensions for <b>NON-COMMERCIAL</b> use you can install <b>MWArray.Extensions.R2017a</b> NuGet <a href="https://www.nuget.org/packages/MWArray.Extensions.R2017a">package</a> from official NuGet packages <a href="https://api.nuget.org/v3/index.json">source</a>.</p>
+            <p class="text">If you want to try these extensions for <b>NON-COMMERCIAL</b> use you can install <b>MWArray.Extensions.v92</b> NuGet <a href="https://www.nuget.org/packages/MWArray.Extensions.v92">package</a> from official NuGet packages <a href="https://api.nuget.org/v3/index.json">source</a>.</p>
             
             <h2 id="builds" class="text">Packages</h2>
-            <p class="text">The MWArray.Extensions library can be build with several versions of MWArray library for several types of operating system (it depends on <a href=https://www.mathworks.com/products/compiler/matlab-runtime.html>MATLAB Runtime Version</a>). The package <b>version of the MWArray is 2.17.0.0</b> from MATLAB Runtime codename R2017a version 9.2. Required operating system for the package is <b>Windows</b>. You must follow these restrictions as same as MATLAB, MATLAB Runtime and MATLAB Compiler restrictions (in readme.txt) otherwise extensions probably will not work!</p>
+            <p class="text">The MWArray.Extensions library can be build with several versions of MWArray library for several types of operating system (it depends on <a href=https://www.mathworks.com/products/compiler/matlab-runtime.html>MATLAB Runtime Version</a>). The package <b>version of the MWArray is 2.17.0.0</b> from MATLAB Runtime codename R2017a version 9.2 (v92). Required operating system for the package is <b>Windows</b>. You must follow these restrictions as same as MATLAB, MATLAB Runtime and MATLAB Compiler restrictions (in readme.txt) otherwise extensions probably will not work!</p>
 
             <h2 id="ToSingleItem" class="text">ToSingleItem</h2>
             <p class="text">This method serves for convert some MWArray based classes (specifically <a href="https://www.mathworks.com/help/dotnetbuilder/MWArrayAPI/html/T_MathWorks_MATLAB_NET_Arrays_MWNumericArray.htm">MWNumericArray</a> and <a href="https://www.mathworks.com/help/dotnetbuilder/MWArrayAPI/html/T_MathWorks_MATLAB_NET_Arrays_MWLogicalArray.htm">MWLogicalArray</a>) <b>to single item</b> of desired type. Because the method (as well as other methods) internally uses <a href="https://msdn.microsoft.com/en-us/library/dtb69x08(v=vs.110).aspx">Convert.ChangeType</a> you can choose any convertible output type (string for example). The output type is defined like a generic parameter of the method.
 <br/><br/>
-			If the source array contains more than one item the method returns the first one (at coordinate [0,0]). If the source array is empty the method throws ArgumentException. As you can see in example (with extension vs. without extension) the method simplify code and make additional conversion implicitly.
+			If the source array contains more than one item the method returns the first one (at coordinate [0,0]). If the source array is empty the method throws ArgumentException. As you can see in tests the method simplify code and make additional conversion implicitly.
 <br/><br/>
 			For more information you can explore <a href="https://github.com/honzakuzel1989/MWArray.Extensions.Tests/blob/master/MWArray.Extensions.Tests/MWArrayExtensionsTests.cs#L15">tests</a> of the method.</p>
 
             <h2 id="ToArray" class="text">ToArray</h2>
             <p class="text">This method is usually use for convert some MWArray based classes (specifically MWNumericArray and MWLogicalArray) <b>to array of items</b> of desired type. Because the method also internally uses Convert.ChangeType you can choose any convertible output type (string for example). The output type is defined like a generic parameter of the method.
 <br/><br/>
-			If the source array contains only one item the method returns the one item array. If the source array is empty the method returns empty array of return type. As you can see in example (with extension vs. without extension) the method simplify code and make additional conversion implicitly.
+			If the source array contains only one item the method returns the one item array. If the source array is empty the method returns empty array of return type. As you can see in tests the method simplify code and make additional conversion implicitly.
 <br/><br/>
 			For more information you can explore <a href="https://github.com/honzakuzel1989/MWArray.Extensions.Tests/blob/master/MWArray.Extensions.Tests/MWArrayExtensionsTests.cs#L153">tests</a> of the method and benchmark (<a href="https://github.com/honzakuzel1989/MWArray.Extensions.Benchmark/blob/master/MWArray.Extensions.Benchmark/ToNumericArray.cs#L11">1</a> <a href="https://github.com/honzakuzel1989/MWArray.Extensions.Benchmark/blob/master/MWArray.Extensions.Benchmark/ToLogicalArray.cs#L11">2</a>) of the method.</p>
 
             <h2 id="ToEnumerableOfArrays" class="text">ToEnumerableOfArrays</h2>
             <p class="text">This method convert some <b>double-dimensional</b> MWArray based classes (specifically MWNumericArray and MWLogicalArray) <b>to enumerable of arrays</b> of desired type. Because the method inside ArrayHelper also internally uses Convert.ChangeType you can choose any convertible output type (string for example). The output type is defined like a generic parameter of the method.
 <br/><br/>
-			If the source array contains only one item the method returns the enumerable with one array with one item. If the source array is empty the method returns empty enumerable of array of return type. As you can see in example (with extension vs. without extension) the method simplify code and make additional conversion implicitly.
+			If the source array contains only one item the method returns the enumerable with one array with one item. If the source array is empty the method returns empty enumerable of array of return type. As you can see tests the method simplify code and make additional conversion implicitly.
 <br/><br/>
 			For more information you can explore <a href="https://github.com/honzakuzel1989/MWArray.Extensions.Tests/blob/master/MWArray.Extensions.Tests/MWArrayExtensionsTests.cs#L293">tests</a> of the method.</p>
 
